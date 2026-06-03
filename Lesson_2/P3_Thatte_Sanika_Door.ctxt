@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=P3_Thatte_Sanika_Door
+comment0.text=\r\n\ <p>The\ class\ P3_Thatte_Sanika_Door\ is\ used\ to\ draw\ a\ door\r\n\ on\ a\ SketchPad\ using\ gpdraw.\ The\ location\ (x\ and\ y\ coordinates)\ can\ be\ changed.\r\n\ The\ door\ and\ doorknob\ can\ be\ scaled\ and\ can\ be\ changed\ through\r\n\ the\ constructor.\ The\ door\ is\ drawn\ centered\ around\ the\ point\ (x,y).\ <br>\ </p>\r\n\ \r\n\ <p>The\ default\ values\ set\ are\ the\ following\:\ <br>\r\n\ \r\n\ \ \ \ \ \ -\ Location\ specified\ in\ the\ constructor\ <br>\r\n\ \ \ \ \ \ -\ Width\ of\ door\ is\ 100\ <br>\r\n\ \ \ \ \ \ -\ Height\ of\ door\ is\ 200\ <br>\r\n\ \ \ \ \ \ -\ Radius\ of\ knob\ is\ 10\ <br>\r\n\ \ \ \ \ \ -\ Color\ of\ Door\ is\ a\ specified\ brown\ color\ (new\ Color(173,\ 111,\ 73))\ <br>\r\n\ \ \ \ \ \ -\ Color\ of\ Knob\ is\ black\ <br>\r\n\ \ \ \ \ \ -\ The\ boolean\ that\ specifies\ whether\ to\ add\ an\ outline\ is\ set\ to\ false\ (default\ is\ no\ outline)\ <br>\r\n\ \ \ \ \ \ \r\n\ </p>\r\n\ \r\n\ <p>Example\ Usage\:\ <br>\r\n\ \ \ \ \ \ //\ creates\ new\ SketchPad\ which\ can\ be\ passed\ to\ the\ constructor\ <br>\r\n\ \ \ \ \ \ //\ specifies\ which\ SketchPad\ to\ draw\ the\ window\ on\ <br>\r\n\ \ \ \ \ \ SketchPad\ pad\ \=\ new\ SketchPad(600,600);\ <br>\r\n\ \r\n\ \ \ \ \ \ //\ creates\ an\ instance\ of\ the\ class\ named\ "door"\ <br>\r\n\ \ \ \ \ \ //\ passes\ in\ parameters\ to\ constructor\ <br>\r\n\ \ \ \ \ \ P3_Thatte_Sanika_Door\ door\ \=\ new\ P3_Thatte_Sanika_Door(pad,\ 0,\ 0,\ 200,\ 400,\ 20);\ <br>\r\n\ \ \ \ \ \ <br>\r\n\ \ \ \ \ \ //\ draws\ a\ door\ with\ specified\ parameters\ <br>\r\n\ \ \ \ \ \ door.draw();\ <br>\r\n\ </p>\r\n\r\n\ @author\ Sanika\ Thatte\r\n\ @version\ 9/1/25\r\n
+comment1.params=pad\ xPos\ yPos
+comment1.target=P3_Thatte_Sanika_Door(gpdraw.SketchPad,\ int,\ int)
+comment1.text=\ <p>\ This\ constructor\ takes\ parameters\ to\ draw\ a\ door\ on\ the\ specified\ pad\r\n\ \ \ \ \ \ \ and\ location.\ The\ default\ attributes\ are\ set\ in\ a\ method\ to\ the\ following\:\ <br>\r\n\ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ \ \ \ \ -\ Location\ specified\ in\ the\ constructor\ <br>\r\n\ \ \ \ \ \ \ \ \ \ \ -\ Width\ of\ door\ is\ 100\ <br>\r\n\ \ \ \ \ \ \ \ \ \ \ -\ Height\ of\ door\ is\ 200\ <br>\r\n\ \ \ \ \ \ \ \ \ \ \ -\ Radius\ of\ knob\ is\ 10\ <br>\r\n\ \ \ \ \ \ \ \ \ \ \ -\ Color\ of\ Door\ is\ a\ specified\ brown\ color\ (new\ Color(173,\ 111,\ 73))\ <br>\r\n\ \ \ \ \ \ \ \ \ \ \ -\ Color\ of\ Knob\ is\ black\ <br>\r\n\ \ \ \ \ \ \ \ \ \ \ -\ The\ boolean\ that\ specifies\ whether\ to\ add\ an\ outline\ is\ set\ to\ false\ (default\ is\ no\ outline)\ <br>\r\n\ \r\n\ \ \ \ \ \ \ </p>\r\n\ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ @param\ pad\ Specified\ pad\ to\ draw\ on\r\n\ \ \ \ \ \ \ @param\ xPos\ The\ x\ coordinate\ for\ set\ location\r\n\ \ \ \ \ \ \ @param\ yPos\ The\ y\ coordinate\ for\ set\ location\r\n\ \ \ \ \ \ \ \r\n
+comment2.params=pad\ xPos\ yPos\ width\ height\ knobR
+comment2.target=P3_Thatte_Sanika_Door(gpdraw.SketchPad,\ int,\ int,\ int,\ int,\ int)
+comment2.text=\ <p>\ This\ constructor\ takes\ the\ parameters\ listed\ below\ to\ draw\ a\ door\r\n\ \ \ \ \ \ \ \ with\ the\ door\ being\ centered\ at\ (x,y).\ <br></p>\r\n\ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ @param\ pad\ Specified\ pad\ to\ draw\ on\r\n\ \ \ \ \ \ \ @param\ xPos\ The\ x\ coordinate\ for\ set\ location\r\n\ \ \ \ \ \ \ @param\ yPos\ The\ y\ coordinate\ for\ set\ location\r\n\ \ \ \ \ \ \ @param\ width\ Width\ of\ door\r\n\ \ \ \ \ \ \ @param\ height\ Height\ of\ door\r\n\ \ \ \ \ \ \ @param\ knobR\ Radius\ of\ knob\r\n\ \ \ \ \ \ \ \r\n
+comment3.params=
+comment3.target=void\ draw()
+comment3.text=This\ method\ draws\ the\ door.
+comment4.params=
+comment4.target=void\ setDefaultAttributes()
+comment4.text=included\ in\ first\ constructor\ to\ set\ all\ default\ values\ for\ attributes
+comment5.params=dC
+comment5.target=void\ setDoorColor(java.awt.Color)
+comment5.text=\ This\ method\ sets\ the\ color\ of\ the\ door.\ If\ left\ unspecified,\ the\ door\ color\r\n\ \ \ \ \ \ \ will\ be\ set\ to\ Black.\ \r\n\ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ @param\ dC\ Door\ Color\r\n
+comment6.params=kC
+comment6.target=void\ setKnobColor(java.awt.Color)
+comment6.text=\ This\ method\ sets\ the\ color\ of\ the\ doorknob.\ If\ left\ unspecified,\ the\ doorknob\ color\r\n\ \ \ \ \ \ \ will\ be\ set\ to\ Black.\ \r\n\ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ @param\ kC\ Doorknob\ Color\r\n
+comment7.params=t
+comment7.target=void\ addOutline(boolean)
+comment7.text=\ This\ method\ provides\ the\ option\ to\ add\ an\ outline.\ If\ left\ unspecified,\ an\ \r\n\ \ \ \ \ \ \ outline\ will\ not\ be\ drawn.\r\n\ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ @param\ t\ Boolean\ for\ whether\ or\ not\ the\ outline\ should\ be\ drawn\ around\ the\ door.\r\n
+numComments=8

@@ -1,0 +1,62 @@
+/*
+    Name:       Sanika Thatte
+    Date:       9/27/25
+    Period:     3
+
+    Is this lab fully working?  Yes.
+*/
+
+
+import period_3_house_parts.*;
+import gpdraw.*;
+import java.awt.Color;
+
+public class P3_Thatte_Sanika_CoolHouse{
+    public static void main(String[] args){
+        SketchPad pad = new SketchPad(600,600);
+        DrawingTool p = new DrawingTool(pad);
+
+        //new Color(216, 168, 123)
+        //new Color(147,105,66)
+        P3_Syed_Mohamed_Sky sky = new P3_Syed_Mohamed_Sky(98, 145, 181, pad);
+        sky.draw();
+
+        P3_Surendar_Arjun_Grass grass = new P3_Surendar_Arjun_Grass(p, 0,-200,600,200,10,new Color(2, 94, 10),new Color(5, 168, 19));
+        grass.setNum((int)(Math.pow(10,4)));
+        grass.draw();
+
+        P3_Dasari_Arnav_Tree a = new P3_Dasari_Arnav_Tree(pad, -200,-100);
+        a.drawTree();
+
+        P3_Budhiraja_Vidushi_Tower t = new P3_Budhiraja_Vidushi_Tower(-150,-100, pad);
+        t.setTowerColor(new Color(242, 150, 250));
+        t.draw();
+
+        P3_Budhiraja_Vidushi_Tower t2 = new P3_Budhiraja_Vidushi_Tower(150,-100, pad);
+        t2.setTowerColor(new Color(242, 150, 250));
+        t2.draw();
+
+        P3_Wang_Colin_Building b = new P3_Wang_Colin_Building(p,0,-50,275,200, 0, 350, 275, new Color(242, 150, 250),new Color(147,105,66));
+        b.draw();
+
+        P3_Bethi_Akshita_Door d = new P3_Bethi_Akshita_Door(0,-105,200,100,pad);
+        d.draw();
+
+        P3_Surendar_Arjun_RandomGeneratedCloud c = new P3_Surendar_Arjun_RandomGeneratedCloud(p,200, 200);
+        c.draw();
+
+        P3_Bethi_Akshita_Roof r = new P3_Bethi_Akshita_Roof(0,50,150,275,8,pad);
+        r.draw();
+
+        P3_Gokhale_Arnav_Window window = new P3_Gokhale_Arnav_Window(pad, 70, 0, new Color(123, 228, 235, 180), 50,50);
+        window.setBarColor(Color.WHITE);
+        window.draw(); 
+
+        P3_Gokhale_Arnav_Window window2 = new P3_Gokhale_Arnav_Window(pad, -70, 0, new Color(123, 228, 235, 180), 50,50);
+        window2.setBarColor(Color.WHITE);
+        window2.draw(); 
+        
+        P3_Dasari_Arnav_Bush bush = new P3_Dasari_Arnav_Bush(pad,200,-100);
+        bush.drawBushes();
+    }
+}

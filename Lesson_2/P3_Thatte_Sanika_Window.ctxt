@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=P3_Thatte_Sanika_Window
+comment0.text=\r\n\ <p>The\ class\ P3_Thatte_Sanika_Window\ is\ used\ to\ draw\ a\ square\ shaped\ window\r\n\ on\ a\ SketchPad\ using\ gpdraw.\ The\ location\ (x\ and\ y\ coordinates)\ can\ be\ changed\r\n\ as\ well\ as\ the\ scaling\ of\ the\ window.\ The\ window\ is\ scaled\ according\ to\ width,\r\n\ which\ can\ be\ changed\ through\ the\ constructor.\ The\ window\ is\ drawn\ centered\ on\r\n\ the\ given\ location\ point\ (x,y).\ <br>\ </p>\r\n\ \r\n\ <p>The\ default\ values\ set\ are\ the\ following\:\ <br>\r\n\ \ \ \ \ \ -\ Location\ specified\ in\ the\ constructor\ <br>\r\n\ \ \ \ \ \ -\ Window\ is\ scaled\ with\ a\ set\ width\ of\ 300\ <br>\r\n\ </p>\r\n\ \r\n\ <p>Example\ Usage\:\ <br>\r\n\ \ \ \ \ \ //\ creates\ new\ SketchPad\ which\ can\ be\ passed\ to\ the\ constructor\ <br>\r\n\ \ \ \ \ \ //\ specifies\ which\ SketchPad\ to\ draw\ the\ window\ on\ <br>\r\n\ \ \ \ \ \ SketchPad\ pad\ \=\ new\ SketchPad(600,600);\ <br>\r\n\ \r\n\ \ \ \ \ \ //\ creates\ an\ instance\ of\ the\ class\ named\ "window"\ <br>\r\n\ \ \ \ \ \ //\ passes\ in\ parameters\ to\ constructor\ <br>\r\n\ \ \ \ \ \ P3_Thatte_Sanika_Window\ window\ \=\ new\ P3_Thatte_Sanika_Window(pad,\ 0,\ 0,\ 150);\ <br>\r\n\ \ \ \ \ \ <br>\r\n\ \ \ \ \ \ //\ draws\ window\ with\ specified\ parameters\ <br>\r\n\ \ \ \ \ \ window.draw();\ <br>\r\n\ </p>\r\n\r\n\ @author\ Sanika\ Thatte\r\n\ @version\ 9/1/25\r\n
+comment1.params=pad\ x\ y
+comment1.target=P3_Thatte_Sanika_Window(gpdraw.SketchPad,\ int,\ int)
+comment1.text=\ <p>\ This\ constructor\ takes\ parameters\ to\ draw\ a\ window\ on\ the\ specified\ pad\r\n\ \ \ \ \ \ \ and\ location.\ The\ default\ width\ is\ 300.\ <br></p>\r\n\ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ @param\ pad\ Specified\ pad\ to\ draw\ on\r\n\ \ \ \ \ \ \ @param\ x\ The\ x\ coordinate\ for\ set\ location\r\n\ \ \ \ \ \ \ @param\ y\ The\ y\ coordinate\ for\ set\ location\r\n\ \ \ \ \ \ \ \r\n
+comment2.params=pad\ x\ y\ width
+comment2.target=P3_Thatte_Sanika_Window(gpdraw.SketchPad,\ int,\ int,\ int)
+comment2.text=\ <p>\ This\ constructor\ takes\ the\ parameters\ listed\ below\ to\ draw\ a\ window\r\n\ centered\ at\ (x,y).\ <br></p>\r\n\ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ @param\ pad\ Specified\ pad\ to\ draw\ on\r\n\ \ \ \ \ \ \ @param\ x\ The\ x\ coordinate\ for\ set\ location\r\n\ \ \ \ \ \ \ @param\ y\ The\ y\ coordinate\ for\ set\ location\r\n\ \ \ \ \ \ \ @param\ width\ The\ width\ of\ the\ window\r\n\ \ \ \ \ \ \ \r\n
+comment3.params=
+comment3.target=void\ draw()
+comment3.text=This\ method\ draws\ the\ window.
+numComments=4

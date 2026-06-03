@@ -1,0 +1,100 @@
+/*
+    Name:       Sanika Thatte
+    Date:       9/1/25
+    Period:     3
+
+    Is this lab fully working?  Yes
+*/
+
+import gpdraw.*;
+import java.awt.Color;
+
+
+public class P3_Thatte_Sanika_Roof{
+    /** x position of the specified location which will be the left bottom corner of the roof*/
+    int xPos;
+    /** y position of the specified location which will be the left bottom corner of the roof*/
+    int yPos;
+    /** color of the roof*/
+    Color c;
+    /** width of roof */
+    int w;
+    /** radius of smaller ovals drawn to make up the roof*/
+    int rad;
+    /** DrawingTool object used to draw specified roof */
+    public static DrawingTool p;
+    
+    
+    /** <p> This constructor takes parameters to draw a roof on the specified pad
+       and location. The default color is Black, default width is 300, and the
+       default oval radius is 10. <br></p>
+       
+       @param pad Specified pad to draw on
+       @param x The x coordinate for set location
+       @param y The y coordinate for set location
+       
+    */
+    public P3_Thatte_Sanika_Roof(SketchPad pad, int x, int y){
+        xPos = x;
+        yPos = y;
+        p = new DrawingTool(pad);
+        c = Color.BLACK;
+        rad = 10;
+        w = 300;
+    }
+    
+    /** <p> This constructor takes the parameters listed below to draw a roof
+        with the bottom left corner at (x,y). <br></p>
+       
+       @param pad Specified pad to draw on
+       @param x The x coordinate for set location
+       @param y The y coordinate for set location
+       @param color Color of the roof
+       @param width Width of the roof
+       @param roofR Radius of ovals drawn to make up roof
+       
+    */
+    public P3_Thatte_Sanika_Roof(SketchPad pad, int x, int y, Color color, int width, int roofR){
+        xPos = x;
+        yPos = y;
+        p = new DrawingTool(pad);
+        c = color;
+        rad = roofR;
+        w = width;
+    }
+    
+    /** This method draws the roof. */
+    public void draw(){
+        //drawRoof(-houseW/2,roofR, new Color(147,105,66), houseW, roofR);
+        p.up();
+        p.move(xPos,yPos);
+        p.setColor(c);
+        p.setDirection(0);
+        boolean turnLeft = true;
+        for(int i=0;i<35;i+=3){
+            p.down();
+            for(int n=0;n<(w/(rad*2))-i;n++){
+                p.fillOval(rad*2,rad*4);
+                p.move(rad*2);
+            }
+            p.up();
+            if(turnLeft){
+                p.turnLeft();
+                p.move(rad*4);
+                p.turnLeft();
+                p.move(rad*5);
+                
+                turnLeft = false;
+            }else{
+                p.turnRight();
+                p.move(rad*4);
+                p.turnRight();
+                p.move(rad*5);
+                
+                turnLeft = true;
+            }
+        }
+        p.up();
+        p.home();
+    }
+}

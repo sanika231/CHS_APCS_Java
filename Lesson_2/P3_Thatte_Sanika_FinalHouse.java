@@ -1,0 +1,280 @@
+/*
+    Name:       Sanika Thatte
+    Date:       9/1/25
+    Period:     3
+
+    Is this lab fully working?  Yes
+*/
+
+import gpdraw.*;
+import java.awt.Color;
+import java.util.Random;
+public class P3_Thatte_Sanika_FinalHouse{
+    static DrawingTool p;
+    public static int s;
+    static SketchPad pad;
+    public static void main(String[] args){
+        P3_Thatte_Sanika_FinalHouse.setSidelengths(600);
+        pad = new SketchPad(s,s);
+        p = new DrawingTool(pad);
+        int houseW = s/2;
+        int houseH = s/2;
+        int bushR = s/12;
+        int roofR = s/120;
+
+        p.setColor(Color.BLACK);
+        p.drawRect(600,600);
+
+        //background
+        drawBackground(houseH);
+
+        //right bush
+        drawBush(-houseW/2, -houseW*4/5, true, bushR);
+
+        //left bushes
+        drawBush((houseH/2)+bushR/2, -houseH*3/5, true, bushR);
+        drawBush(houseH/2+ bushR*2/3, -houseH*4/5, true, bushR);
+
+        //house
+        drawHouse(0,-houseH/2, houseW,houseH, new Color(216, 168, 123));
+
+        //roof
+        //drawRoof(-houseW/2,roofR, new Color(147,105,66), houseW, roofR);
+        P3_Thatte_Sanika_Roof r = new P3_Thatte_Sanika_Roof(pad, -houseW/2,roofR, new Color(147,105,66), houseW, roofR);
+        r.draw();
+
+        //base
+        drawBase(0,-(houseH*7/8),houseW+(2*houseW/10), houseH/10, new Color(147,105,66));
+        drawBase(0,-(houseH*7/8 + houseH/13), houseW+(2*houseW/5), houseH/10, new Color(147,105,66));
+
+        //door
+        //drawDoor(-(((houseW/2)-(houseW/10))/2),-((houseH/2)- (houseH/30)), houseW/3, houseH-(houseH/3), roofR*2, new Color(173, 111, 73), Color.BLACK, true);
+        P3_Thatte_Sanika_Door d = new P3_Thatte_Sanika_Door(pad, -(((houseW/2)-(houseW/10))/2),-((houseH/2)- (houseH/30)), houseW/3, houseH-(houseH/3), roofR*2);
+        d.setDoorColor(new Color(173, 111, 73));
+        d.setKnobColor(Color.BLACK);
+        d.addOutline(true);
+        d.draw();
+        
+        //window
+        //drawWindow((houseW/3)-(houseW/10),-(houseH/3), houseW);
+        P3_Thatte_Sanika_Window w = new P3_Thatte_Sanika_Window(pad, (houseW/3)-(houseW/10),-(houseH/3), houseW);
+        w.draw();
+    }
+
+    public static void drawBush(int x, int y, boolean outline, int bushR){
+        p.up();
+        p.move(x,y);
+        p.setColor(Color.GREEN);
+        p.down();
+        p.fillCircle(bushR);
+        if(outline){
+            p.setColor(new Color(30,131,25));
+            p.drawCircle(bushR);
+        }
+        p.up();
+        p.home();
+    }
+
+    public static void drawRoof(int x, int y, Color c, int tWidth, int roofR){
+        p.up();
+        p.move(x,y);
+        p.setColor(c);
+        p.setDirection(0);
+        boolean turnLeft = true;
+        for(int i=0;i<35;i+=3){
+            p.down();
+            for(int n=0;n<(tWidth/(roofR*2))-i;n++){
+                p.fillOval(roofR*2,roofR*4);
+                p.move(roofR*2);
+            }
+            p.up();
+            if(turnLeft){
+                p.turnLeft();
+                p.move(roofR*4);
+                p.turnLeft();
+                p.move(roofR*5);
+
+                turnLeft = false;
+            }else{
+                p.turnRight();
+                p.move(roofR*4);
+                p.turnRight();
+                p.move(roofR*5);
+
+                turnLeft = true;
+            }
+        }
+        p.up();
+        p.home();
+    }
+
+    public static void drawDoor(int x, int y, int w, int h, int knobRadius, Color doorColor, Color knobColor, boolean outline){
+        p.up();
+        p.move(x,y);
+        p.setColor(doorColor);
+        p.down();
+        p.fillRect(w,h);
+        if(outline){
+            p.setColor(Color.BLACK);
+            p.drawRect(w,h);
+        }
+        p.up();
+        p.setDirection(0);
+        p.move(-(w/2 - w/4));
+        p.down();
+        p.setColor(knobColor);
+        p.drawCircle(knobRadius);
+        p.up();
+        p.home();
+    }
+
+    public static void drawWindow(int x, int y, int w){
+        p.up();
+        p.move(x,y);
+        p.setDirection(90);
+        p.setColor(Color.BLACK);
+        p.down();
+        p.setWidth(3);
+        p.drawRect(w/3,w/3);
+        p.setWidth(1);
+        p.setColor(new Color(123, 228, 235, 180));
+        p.fillRect(w/3,w/3);
+        p.setColor(Color.BLACK);
+        p.turnRight();
+        p.move((w/3)-(w/6));
+        p.turnRight();
+        p.turnRight();
+        p.move(2*((w/3)-(w/6)));
+        p.turnRight();
+        p.turnRight();
+        p.move((w/3)-(w/6));
+
+        p.turnRight();
+        p.move((w/3)-(w/6));
+        p.turnRight();
+        p.turnRight();
+        p.move(2*((w/3)-(w/6)));
+        p.up();
+        p.home();
+    }
+
+    public static void drawBase(int x, int y, int w, int h, Color c){
+        p.up();
+        p.setColor(c);
+        p.move(x,y);
+        p.down();
+        p.fillRect(w,h);
+        p.setColor(Color.BLACK);
+        p.drawRect(w,h);
+        p.up();
+        p.home();
+    }
+
+    public static void drawHouse(int x, int y, int w, int h, Color c){
+        p.up();
+        p.move(x,y);
+        p.down();
+        p.setColor(c);
+        p.fillRect(w,h);
+        p.setColor(Color.BLACK);
+        p.drawRect(w,h);
+        p.up();
+        p.home();
+    }
+
+    public static void drawBackground(int houseH){
+        p.up();
+        p.move(0,-houseH*3/4);
+        p.setColor(new Color(6, 162, 6,230));
+        p.down();
+        p.fillRect(s, houseH/2);
+        p.up();
+        p.home();
+        p.move(0,houseH/4);
+        p.setColor(new Color(18, 161, 222,180));
+        p.down();
+        p.fillRect(s,s*6/8);
+        p.up();
+        p.home();
+
+        drawWeather();
+    }
+
+    public static void drawWeather(){
+        /* will generate random number to determine whether
+         * the weather will be sunny, cloudy or nighttime
+         */
+
+        Random random = new Random();
+        int r = random.nextInt(3);
+        if(r == 0){
+            //sunny
+            int k = random.nextInt(80)+10;
+            p.up();
+            p.move(s/3, s/3);
+            p.setColor(new Color(232, 201, 72));
+            p.down();
+            p.fillCircle(k);
+
+            p.setDirection(0);
+            int x = (int)(p.getXPos());
+            int y = (int)(p.getYPos());
+            //int dir = 0;
+            for(int i=0;i<360;i++){
+                int moveLength = random.nextInt(30)+10;
+                p.move(k+moveLength);
+                p.move(x,y);
+                p.turn(1);
+            }
+
+            p.up();
+            p.home();
+        }else if(r==1){
+            //cloudy
+            P3_Thatte_Sanika_Cloud c = new P3_Thatte_Sanika_Cloud(pad, (-s/3)-(s/15), s/5, s/12);
+            c.draw();
+            //drawCloud((-s/3)-(s/15), s/5, s/12);
+        }else if(r==2){
+            //night
+            p.up();
+            p.home();
+            p.move(0,(s/2)/4);
+            p.setColor(new Color(16, 12, 136, 180));
+            p.down();
+            p.fillRect(s,s*6/8);
+            p.up();
+            p.home();
+        }
+    }
+
+    public static void drawCloud(int x, int y, int r){
+        p.up();
+        p.move(x,y);
+        p.setColor(Color.WHITE);
+        p.down();
+        //bottom
+        p.fillOval(r*2,r);
+        p.setDirection(0);
+        for(int i = 0;i<2;i++){
+            p.move(r);
+            p.fillOval(r*2,r);
+        }
+
+        //middle
+        p.move(p.getXPos()-r/2, p.getYPos()+r/2);
+        p.fillOval(r*2,r);
+        p.setDirection(180);
+        p.move(r);
+        p.fillOval(r*2,r);
+
+        //top
+        p.move(p.getXPos()+r/2,p.getYPos()+r/2);
+        p.fillCircle(r);
+        p.up();
+        p.home();
+    }
+    
+    public static void setSidelengths(int a){
+        s = a;
+    }
+}

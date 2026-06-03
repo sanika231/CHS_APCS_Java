@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=P3_Thatte_Sanika_FinalHouse
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment10.params=x\ y\ r
+comment10.target=void\ drawCloud(int,\ int,\ int)
+comment11.params=a
+comment11.target=void\ setSidelengths(int)
+comment2.params=x\ y\ outline\ bushR
+comment2.target=void\ drawBush(int,\ int,\ boolean,\ int)
+comment3.params=x\ y\ c\ tWidth\ roofR
+comment3.target=void\ drawRoof(int,\ int,\ java.awt.Color,\ int,\ int)
+comment4.params=x\ y\ w\ h\ knobRadius\ doorColor\ knobColor\ outline
+comment4.target=void\ drawDoor(int,\ int,\ int,\ int,\ int,\ java.awt.Color,\ java.awt.Color,\ boolean)
+comment5.params=x\ y\ w
+comment5.target=void\ drawWindow(int,\ int,\ int)
+comment6.params=x\ y\ w\ h\ c
+comment6.target=void\ drawBase(int,\ int,\ int,\ int,\ java.awt.Color)
+comment7.params=x\ y\ w\ h\ c
+comment7.target=void\ drawHouse(int,\ int,\ int,\ int,\ java.awt.Color)
+comment8.params=houseH
+comment8.target=void\ drawBackground(int)
+comment9.params=
+comment9.target=void\ drawWeather()
+numComments=12
