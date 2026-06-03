@@ -1,0 +1,20 @@
+public class For_Loops_Test{
+    public static void main(String[] args){
+        /*for (int i=1;i<5;i++){
+            for (int j=5;j<=20;j+=5){
+                if((i+j)%3==0){
+                    System.out.print(i+" plus "+j+" ");
+                }
+            }
+            System.out.println();
+        }*/
+        
+        for(int r=98;r>5;r-=12){
+            if(){
+                System.out.print(r+" ");
+            }else{
+                System.out.println(r*10);
+            }
+        }
+    }
+}

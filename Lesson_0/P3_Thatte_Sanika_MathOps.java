@@ -1,0 +1,21 @@
+/*
+    Name:       Sanika Thatte
+    Date:       8/19/25
+    Period:     3
+
+    Is this lab fully working?  Yes
+*/
+
+
+public class P3_Thatte_Sanika_MathOps{
+    public static void main(String[] args){
+        double triBase = 22.4;
+        double triHeight = 30.7;
+        double decimalTriArea = (triBase * triHeight)/2;
+        int intTriArea = (int)(decimalTriArea);
+        System.out.println("base = "+triBase);
+        System.out.println("height = "+triHeight);
+        System.out.println("decArea = "+decimalTriArea);
+        System.out.println("intArea = "+intTriArea);
+    }
+}

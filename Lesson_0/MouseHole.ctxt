@@ -1,0 +1,21 @@
+#BlueJ class context
+comment0.target=MouseHole
+comment1.params=
+comment1.target=MouseHole()
+comment2.params=w\ h\ pen
+comment2.target=MouseHole(int,\ int,\ gpdraw.DrawingTool)
+comment3.params=xPos\ yPos
+comment3.target=void\ setPosition(int,\ int)
+comment4.params=
+comment4.target=int\ getX()
+comment5.params=
+comment5.target=int\ getY()
+comment6.params=width
+comment6.target=void\ setHoleWidth(int)
+comment7.params=height
+comment7.target=void\ setHoleHeight(int)
+comment8.params=c
+comment8.target=void\ setWallColor(java.awt.Color)
+comment9.params=
+comment9.target=void\ draw()
+numComments=10

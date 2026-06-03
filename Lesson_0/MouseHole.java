@@ -1,0 +1,87 @@
+import gpdraw.*;
+import java.awt.Color;
+
+public class MouseHole{
+    private int width;
+    private int height;
+    private int x;
+    private int y;
+    private int hWidth;
+    private int hHeight;
+    private DrawingTool p;
+    public Color wallColor;
+    
+    public MouseHole(){
+        width = 400;
+        height = 300;
+        hWidth = 50;
+        hHeight = 80;
+        x = -100;
+        y = -200;
+        wallColor = Color.BLUE;
+        p = new DrawingTool();
+    }
+    
+    public MouseHole(int w, int h, DrawingTool pen){
+        width = w;
+        height = h;
+        hWidth = 50;
+        hHeight = 80;
+        x = -100;
+        y = -200;
+        wallColor = Color.BLUE;
+        p = pen;
+    }
+    
+    public void setPosition(int xPos, int yPos){
+        x = xPos;
+        y = yPos;
+    }
+    
+    public int getX(){
+        return x;
+    }
+    
+    public int getY(){
+        return y;
+    }
+    
+    public void setHoleWidth(int width){
+        if(!(width<0)){
+            hWidth = width;
+        }else{
+            System.out.println("value can not be negative.");
+        }
+    }
+    
+    public void setHoleHeight(int height){
+        if(!(height<0)){
+            hHeight = height;
+        }else{
+            System.out.println("value can not be negative.");
+        }
+    }
+    
+    public void setWallColor(Color c){
+        wallColor = c;
+    }
+    
+    public void draw(){
+        p.up();
+        p.move(x+width/2, y+height/2);
+        p.setColor(wallColor);
+        p.down();
+        p.fillRect(width,height);
+        p.up();
+        p.move(x+width/2, (y+hHeight/2)-hWidth/4);
+        p.setColor(Color.BLACK);
+        p.down();
+        p.fillRect(hWidth, hHeight-hWidth/2);
+        p.up();
+        p.move(x+width/2, (y+hHeight)-hWidth/2);
+        p.down();
+        p.fillCircle(hWidth/2);
+        p.up();
+        p.home();
+    }
+}

@@ -1,0 +1,8 @@
+#BlueJ class context
+comment0.target=DataTypesCheck
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=num
+comment2.target=int\ neg(int)
+comment2.text=if(n>0){\r\n\ \ \ \ return\ b*power(b,n-1);\r\n\ \ \ \ }else{\r\n\ \ \ \ return\ 1;\r\n}
+numComments=3
