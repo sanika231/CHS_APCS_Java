@@ -1,0 +1,9 @@
+public class BankAccountDriver{
+    public static void main(String[] args){
+        BankAccount b = new BankAccount();
+        b.executeTransaction(1000);
+        b.executeTransaction(-20);
+        b.executeTransaction(70);
+        BankAccount.printLog();
+    }
+}

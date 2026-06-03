@@ -1,0 +1,25 @@
+#BlueJ class context
+comment0.target=P3_Thatte_Sanika_Math
+comment0.text=\ This\ class\ is\ used\ for\ calculations\ and\ conversions.\r\n\ \r\n\ @author\ Sanika\ Thatte\r\n
+comment1.params=f
+comment1.target=double\ fToC(double)
+comment1.text=this\ method\ converts\ farenheight\ to\ celsius\ (as\ a\ double)\r\n\ \ \ \ \ \ \ \r\n@param\ f\ the\ degrees\ in\ F
+comment2.params=c
+comment2.target=double\ cToF(double)
+comment2.text=this\ method\ converts\ celsius\ to\ farenheight\ (as\ a\ double)\r\n\ \ \ \ \ \ \ \r\n@param\ c\ the\ degrees\ in\ C
+comment3.params=r
+comment3.target=int\ calcVolume(int)
+comment3.text=this\ method\ calculates\ the\ volume\ of\ a\ circle\ (as\ an\ int)\ given\ the\ radius\r\n\ \ \ \ \ \ \ \r\n@param\ r\ the\ radius\ of\ the\ circle
+comment4.params=s1\ s2
+comment4.target=double\ calcHypotenuse(double,\ double)
+comment4.text=this\ method\ calculates\ the\ hypotenuse\ (as\ a\ double)\ given\ two\ side\ lengths\r\n\ \ \ \ \ \ \ \r\n\ \ \ \ \ \ \ @param\ s1\ first\ side\ length\r\n@param\ s2\ second\ side\ length
+comment5.params=mass\ grams
+comment5.target=double\ gramsToAtoms(double,\ double)
+comment5.text=this\ method\ converts\ the\ number\ of\ grams\ to\ atoms(as\ a\ double)\ given\ the\ mass\ and\ number\ of\ grams\r\n\ \ \ \ \ \ \ \r\n\ @param\ mass\ the\ mass\ of\ the\ object\r\n\ @param\ grams\ the\ number\ of\ grams\ in\ the\ object\r\n
+comment6.params=a\ b
+comment6.target=int\ generateRandNum(int,\ int)
+comment6.text=this\ method\ generates\ a\ random\ number\ between\ the\ given\ values\ (inclusive).\r\n\ it\ returns\ an\ integer\r\n\ \r\n\ @param\ a\ first\ number\r\n\ @param\ b\ second\ number\r\n\ \ \ \ \ \ \ \r\n
+comment7.params=a\ b\ c
+comment7.target=double\ calcPerim(java.awt.Point,\ java.awt.Point,\ java.awt.Point)
+comment7.text=calculates\ perimeter\ given\ distance\ between\ 3\ points\r\n\ \r\n\ @param\ a\ Point\ a\r\n\ @param\ b\ Point\ b\r\n\ @param\ c\ Point\ c\r\n
+numComments=8

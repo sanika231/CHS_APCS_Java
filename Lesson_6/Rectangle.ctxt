@@ -1,0 +1,15 @@
+#BlueJ class context
+comment0.target=Rectangle
+comment1.params=x\ y\ width\ height\ pad
+comment1.target=Rectangle(double,\ double,\ double,\ double,\ gpdraw.SketchPad)
+comment2.params=
+comment2.target=double\ calcPerimeter()
+comment3.params=
+comment3.target=double\ calcArea()
+comment4.params=
+comment4.target=void\ draw()
+comment5.params=
+comment5.target=double\ getWidth()
+comment6.params=
+comment6.target=double\ getHeight()
+numComments=7

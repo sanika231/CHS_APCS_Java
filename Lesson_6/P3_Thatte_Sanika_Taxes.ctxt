@@ -1,0 +1,26 @@
+#BlueJ class context
+comment0.target=P3_Thatte_Sanika_Taxes
+comment0.text=\r\nName\:\ \ \ \ \ \ \ Sanika\ Thatte\r\nDate\:\ \ \ \ \ \ \ 11/22/25\r\nPeriod\:\ \ \ \ \ 3\r\n\r\nIs\ this\ lab\ fully\ working?\ \ Yes\r\n
+comment1.params=h\ r
+comment1.target=P3_Thatte_Sanika_Taxes(int,\ double)
+comment10.params=h
+comment10.target=void\ setHours(int)
+comment11.params=r
+comment11.target=void\ setRate(double)
+comment2.params=
+comment2.target=double\ getGrossPay()
+comment3.params=
+comment3.target=double\ getFederalTaxPercentage()
+comment4.params=
+comment4.target=double\ getFICATaxPercentage()
+comment5.params=
+comment5.target=double\ getStateTaxPercentage()
+comment6.params=
+comment6.target=double\ getNetPay()
+comment7.params=
+comment7.target=void\ printTaxes()
+comment8.params=
+comment8.target=int\ getHours()
+comment9.params=
+comment9.target=double\ getRate()
+numComments=12

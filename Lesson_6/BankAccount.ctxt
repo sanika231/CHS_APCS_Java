@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=BankAccount
+comment0.text=\r\n\ 1.\ The\ loophole\ is\ that\ the\ variable\ 'balance'\ is\ public.\r\n\ This\ means\ that\ it\ could\ be\ changed\ from\ any\ class,\ without\r\n\ this\ change\ being\ recorded\ in\ the\ transaction\ log.\r\n\ \r\n\ 2.\ The\ log\ can\ still\ be\ edited\ from\ other\ classes\ in\ the\r\n\ same\ package.\r\n\ \r\n\ 3.\ This\ could\ be\ fixed\ by\ making\ the\ variables\ 'log'\ and\r\n\ 'balance'\ private.\r\n\ \r\n\ 4.\ If\ multiple\ bank\ accounts\ are\ created,\ they\ have\ a\r\n\ common\ log.\ This\ is\ because\ the\ log\ variable\ is\ static\r\n\ and\ is\ therefore\ shared\ among\ all\ instances\ of\ the\r\n\ BankAccount\ class.\r\n\ \r\n\ 5.\ If\ multiple\ bank\ accounts\ are\ created,\ each\ account\ has\r\n\ its\ own\ balance.\ This\ is\ because\ balance\ is\ not\ a\ static,\r\n\ or\ class\ variable.\ Instead,\ it\ is\ an\ instance\ variable.\ \r\n\ This\ means\ that\ it\ changes\ with\ each\ instance\ of\ the\ class\r\n\ and\ all\ bank\ accounts\ do\ not\ have\ a\ common/shared\ balance.\r\n
+comment1.params=
+comment1.target=BankAccount()
+comment2.params=b
+comment2.target=void\ executeTransaction(double)
+comment3.params=
+comment3.target=java.lang.String\ generateAccountNumber()
+comment4.params=
+comment4.target=void\ printLog()
+numComments=5
