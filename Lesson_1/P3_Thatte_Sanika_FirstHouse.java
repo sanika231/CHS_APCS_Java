@@ -1,0 +1,162 @@
+/*
+    Name:       Sanika Thatte
+    Date:       8/24/25
+    Period:     3
+
+    Is this lab fully working?  Yes
+*/
+import gpdraw.*; 
+import java.awt.Color;
+public class P3_Thatte_Sanika_FirstHouse{
+    public static void main(String[] args){
+        DrawingTool p = new DrawingTool(new SketchPad(600,600));
+        int houseW = 300;
+        int houseH = 300;
+        int bushR = 50;
+        int roofR = 5;
+        
+        //leftbush
+        p.up();
+        p.turnLeft();
+        p.move(houseW/2);
+        p.turnLeft();
+        p.move(houseH*4/5);
+        p.setColor(Color.GREEN);
+        p.down();
+        p.fillCircle(bushR);
+        p.setColor(new Color(30,131,25));
+        p.drawCircle(bushR);
+        p.up();
+        p.home();
+        
+        //right bushes
+        p.turnRight();
+        p.move(houseH/2);
+        p.turnRight();
+        p.move(houseH*4/5);
+        p.turn(135);
+        p.move(bushR);
+        p.down();
+        p.setColor(Color.GREEN);
+        p.fillCircle(bushR);
+        p.setColor(new Color(30,131,25));
+        p.drawCircle(bushR);
+        p.up();
+        
+        p.turn(-135);
+        p.move(bushR);
+        p.down();
+        p.setColor(Color.GREEN);
+        p.fillCircle(bushR);
+        p.setColor(new Color(30,131,25));
+        p.drawCircle(bushR);
+        p.up();
+        p.home();
+        
+        //house
+        p.turnRight();
+        p.turnRight();
+        p.move(houseH/2);
+        p.down();
+        p.setColor(new Color(216, 168, 123));
+        p.fillRect(houseW,houseH);
+        p.setColor(Color.BLACK);
+        p.drawRect(houseW,houseH);
+        p.up();
+        p.home();
+        
+        p.turnLeft();
+        p.move(houseW/2);
+        p.turnRight();
+        p.move(roofR);
+        p.turnRight();
+        boolean turnLeft = true;
+        p.setColor(new Color(147,105,66));
+        for(int i=0;i<35;i+=3){
+            p.down();
+            for(int n=0;n<(houseW/(roofR*2))-i;n++){
+                p.fillOval(roofR*2,roofR*4);
+                p.move(roofR*2);
+            }
+            p.up();
+            if(turnLeft){
+                p.turnLeft();
+                p.move(roofR*4);
+                p.turnLeft();
+                p.move(roofR*5);
+                
+                turnLeft = false;
+            }else{
+                p.turnRight();
+                p.move(roofR*4);
+                p.turnRight();
+                p.move(roofR*5);
+                
+                turnLeft = true;
+            }
+        }
+        p.up();
+        p.home();
+        
+        //base
+        p.turnLeft();
+        p.turnLeft();
+        p.move(houseH*7/8);
+        p.down();
+        p.fillRect(houseW+(2*houseW/10), houseH/10);
+        p.setColor(Color.BLACK);
+        p.drawRect(houseW+(2*houseW/10), houseH/10);
+        p.up();
+        p.home();
+        
+        //door
+        p.turnLeft();
+        p.move(((houseW/2)-(houseW/10))/2);
+        p.turnLeft();
+        p.move((houseH/2)- (houseH/30));
+        p.down();
+        p.setColor(new Color(173, 111, 73));
+        p.fillRect(houseW/3, houseH-(houseH/3));
+        p.setColor(Color.BLACK);
+        p.drawRect(houseW/3, houseH-(houseH/3));
+        p.up();
+        //doorknob
+        p.turnLeft();
+        p.move((houseW/3)/2 - houseW/12);
+        p.setColor(Color.BLACK);
+        p.down();
+        p.drawCircle(10);
+        p.up();
+        p.home();
+        
+        //window
+        p.turnRight();
+        p.move((houseW/3)-(houseW/10));
+        p.turnRight();
+        p.move((houseH/3));
+        p.setColor(Color.BLACK);
+        p.down();
+        p.setWidth(3);
+        p.drawRect(houseW/3,houseW/3);
+        p.setWidth(1);
+        p.setColor(new Color(123, 228, 235));
+        p.fillRect(houseW/3,houseW/3);
+        p.setColor(Color.BLACK);
+        p.turnRight();
+        p.move((houseW/3)-(houseW/6));
+        p.turnRight();
+        p.turnRight();
+        p.move(2*((houseW/3)-(houseW/6)));
+        p.turnRight();
+        p.turnRight();
+        p.move((houseW/3)-(houseW/6));
+        
+        p.turnRight();
+        p.move((houseW/3)-(houseW/6));
+        p.turnRight();
+        p.turnRight();
+        p.move(2*((houseW/3)-(houseW/6)));
+        p.up();
+        p.home();
+    }
+}
