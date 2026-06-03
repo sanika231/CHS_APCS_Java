@@ -1,0 +1,22 @@
+/*
+    Name:       Sanika Thatte
+    Date:       9/27/25
+    Period:     3
+
+    Is this lab fully working? Yes.
+*/
+
+import gpdraw.*;
+
+public class P3_Thatte_Sanika_Driver{
+    public static void main(String[] args){
+        SketchPad pad = new SketchPad(600,600);
+        P3_Thatte_Sanika_Sphere sphere = new P3_Thatte_Sanika_Sphere(pad,100, 0,0, 45);
+        sphere.draw();
+        System.out.println("Volume of Sphere 1" + sphere.getVolume());
+        
+        P3_Thatte_Sanika_Sphere sphere2 = new P3_Thatte_Sanika_Sphere(pad,20, -200,0, 135);
+        sphere2.draw();
+        System.out.println("Volume of Sphere 2: " + sphere2.getVolume());
+    }
+}
