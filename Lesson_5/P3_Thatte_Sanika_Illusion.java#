@@ -1,0 +1,139 @@
+/*
+    Name:       Sanika Thatte
+    Date:       9/27/25
+    Period:     3
+
+    Is this lab fully working? Yes.
+*/
+
+
+import gpdraw.*;
+import java.awt.*;
+
+/** This class contains static methods to draw an illusion
+ * with squares.
+*/
+public class P3_Thatte_Sanika_Illusion{
+    /** <br> Draws a singular square of width w with a gradient in the specified
+     * direction, starting at a specified x,y coordinate. </br>
+     * 
+     * @param p The drawingtool used to draw on sketchpad
+     * @param x The x coordinate of top left corner of square
+     * @param y The y coordinate of top left corner of square
+     * @param w The width/ height of the square
+     * @param dirRight Boolean value that specifies whether the
+     * gradient is drawn to the left or right
+       
+    */
+    public static void drawSquare(DrawingTool p, int x, int y, int w, boolean dirRight){
+        p.up();
+        p.move(x,y);
+        Color c = p.getColor();
+        for(int i=0;i<w; i++){
+            p.setColor(new Color((c.getRed()/w)*i,(c.getBlue()/w)*i,(c.getGreen()/w)*i));
+            p.down();
+            p.move(x,y-w);
+            p.move(x,y);
+            if(dirRight){
+                x++;
+            }else{
+                x--;
+            }
+        }
+        long n = 29;
+    }
+    
+    /** <br> Draws a row of squares of width w with gradient in the specified
+     * direction, starting at a specified x,y coordinate. The colors
+     * alternate between three colors.</br>
+     * 
+     * @param p The drawingtool used to draw on sketchpad
+     * @param squareNum The number of squares drawn
+     * @param x The x coordinate of top left corner of the first square
+     * @param y The y coordinate of top left corner of the first square
+     * @param w The width/ height of the square
+     * @param dirRight Boolean value that specifies whether the
+     * gradient is drawn to the left or right
+     * @colorNum The number of the starting color (1,2, or 3)
+       
+    */
+    public static void drawRowOfSquares(DrawingTool p, int squareNum, int x, int y, int w, boolean dirRight, int colorNum){
+        for(int i=0;i<squareNum; i++){
+            setColorNum(colorNum, p);
+            if(colorNum!=3){
+                colorNum++;
+            }else{
+                colorNum=1;
+            }
+            drawSquare(p,x,y,w,dirRight);
+            x+=w;
+        }
+    }
+    
+    
+    /** <br> Draws a box of squares of width w with gradient in the specified
+     * direction, starting at a specified x,y coordinate. The colors
+     * alternate between three colors. It also adds a horizontal
+     * line between each row. </br>
+     * 
+     * @param p The drawingtool used to draw on sketchpad
+     * @param rowNum The number of rows drawn
+     * @param cNum The number of columns drawn
+     * @param x The x coordinate of top left corner of the first square
+     * @param y The y coordinate of top left corner of the first square
+     * @param w The width/ height of the square
+     * @param dirRight Boolean value that specifies whether the
+     * gradient is drawn to the left or right
+     * @colorNum The number of the starting color (1,2, or 3)
+       
+    */
+    public static void draw(DrawingTool p, int rowNum, int cNum, int x, int y, int w, boolean dirRight, int colorNum){
+        int origX = x;
+        int origY = y;
+        for(int i=0;i<cNum;i++){
+            if(i%2==0){
+                drawRowOfSquares(p,rowNum,x-w/2,y, w, dirRight, colorNum);
+            }else{
+                drawRowOfSquares(p,rowNum,x,y, w, dirRight, colorNum);
+            }
+            drawLine(p, x,y,w*rowNum);
+            y-=w;
+            dirRight = !dirRight;
+        }
+    }
+    
+    /**<br>Draws a black line of specified length at the given x, y
+     * coordinate</br>
+     * 
+     * @param p The DrawingTool used to draw the line
+     * @param x The x coordinate of where the line will be centered
+     * @param y The y coordinate of where the line will be centered
+     * @param length The horizontal length of the line
+       
+    */
+    public static void drawLine(DrawingTool p, int x, int y, int length){
+        p.setColor(Color.BLACK);
+        p.up();
+        p.move(x+length/2,y);
+        p.down();
+        p.fillRect(length, 6);
+    }
+    
+    
+    /** <br> Sets the color of the DrawingTool p according to
+     * the number passed in. </br>
+     * 
+     * @param cN Number related to each color (can be 1,2 or 3)
+     * @param p DrawingTool used to draw on SketchPad
+       
+    */
+    public static void setColorNum(int cN, DrawingTool p){
+        if(cN == 1){
+            p.setColor(new Color(219, 140, 206));
+        }else if(cN==2){
+            p.setColor(new Color(224, 224, 128));
+        }else{
+            p.setColor(new Color(131, 214, 252));
+        }
+    }
+}

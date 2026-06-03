@@ -1,0 +1,23 @@
+/*
+    Name:       Sanika Thatte
+    Date:       9/27/25
+    Period:     3
+
+    Is this lab fully working? Yes.
+*/
+
+import gpdraw.*;
+import java.awt.Color;
+
+public class P3_Thatte_Sanika_Driver{
+    public static void main(String[] args){
+        DrawingTool p = new DrawingTool(new SketchPad(600,600));
+        p.setColor(new Color(219, 140, 206));
+        P3_Thatte_Sanika_Illusion.draw(p, 8, 6, -350,300, 100, true, 1);
+        
+        DrawingTool d = new DrawingTool(new SketchPad(300,300));
+        p.setColor(new Color(219, 140, 206));
+        P3_Thatte_Sanika_Illusion.draw(d, 8, 6, -200,150, 50, true, 1);
+        
+    }
+}

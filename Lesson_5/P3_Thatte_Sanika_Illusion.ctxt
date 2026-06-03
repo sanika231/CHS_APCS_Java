@@ -1,0 +1,19 @@
+#BlueJ class context
+comment0.target=P3_Thatte_Sanika_Illusion
+comment0.text=\ This\ class\ contains\ static\ methods\ to\ draw\ an\ illusion\r\n\ with\ squares.\r\n
+comment1.params=p\ x\ y\ w\ dirRight
+comment1.target=void\ drawSquare(gpdraw.DrawingTool,\ int,\ int,\ int,\ boolean)
+comment1.text=\ <br>\ Draws\ a\ singular\ square\ of\ width\ w\ with\ a\ gradient\ in\ the\ specified\r\n\ direction,\ starting\ at\ a\ specified\ x,y\ coordinate.\ </br>\r\n\ \r\n\ @param\ p\ The\ drawingtool\ used\ to\ draw\ on\ sketchpad\r\n\ @param\ x\ The\ x\ coordinate\ of\ top\ left\ corner\ of\ square\r\n\ @param\ y\ The\ y\ coordinate\ of\ top\ left\ corner\ of\ square\r\n\ @param\ w\ The\ width/\ height\ of\ the\ square\r\n\ @param\ dirRight\ Boolean\ value\ that\ specifies\ whether\ the\r\n\ gradient\ is\ drawn\ to\ the\ left\ or\ right\r\n\ \ \ \ \ \ \ \r\n
+comment2.params=p\ squareNum\ x\ y\ w\ dirRight\ colorNum
+comment2.target=void\ drawRowOfSquares(gpdraw.DrawingTool,\ int,\ int,\ int,\ int,\ boolean,\ int)
+comment2.text=\ <br>\ Draws\ a\ row\ of\ squares\ of\ width\ w\ with\ gradient\ in\ the\ specified\r\n\ direction,\ starting\ at\ a\ specified\ x,y\ coordinate.\ The\ colors\r\n\ alternate\ between\ three\ colors.</br>\r\n\ \r\n\ @param\ p\ The\ drawingtool\ used\ to\ draw\ on\ sketchpad\r\n\ @param\ squareNum\ The\ number\ of\ squares\ drawn\r\n\ @param\ x\ The\ x\ coordinate\ of\ top\ left\ corner\ of\ the\ first\ square\r\n\ @param\ y\ The\ y\ coordinate\ of\ top\ left\ corner\ of\ the\ first\ square\r\n\ @param\ w\ The\ width/\ height\ of\ the\ square\r\n\ @param\ dirRight\ Boolean\ value\ that\ specifies\ whether\ the\r\n\ gradient\ is\ drawn\ to\ the\ left\ or\ right\r\n\ @colorNum\ The\ number\ of\ the\ starting\ color\ (1,2,\ or\ 3)\r\n\ \ \ \ \ \ \ \r\n
+comment3.params=p\ rowNum\ cNum\ x\ y\ w\ dirRight\ colorNum
+comment3.target=void\ draw(gpdraw.DrawingTool,\ int,\ int,\ int,\ int,\ int,\ boolean,\ int)
+comment3.text=\ <br>\ Draws\ a\ box\ of\ squares\ of\ width\ w\ with\ gradient\ in\ the\ specified\r\n\ direction,\ starting\ at\ a\ specified\ x,y\ coordinate.\ The\ colors\r\n\ alternate\ between\ three\ colors.\ It\ also\ adds\ a\ horizontal\r\n\ line\ between\ each\ row.\ </br>\r\n\ \r\n\ @param\ p\ The\ drawingtool\ used\ to\ draw\ on\ sketchpad\r\n\ @param\ rowNum\ The\ number\ of\ rows\ drawn\r\n\ @param\ cNum\ The\ number\ of\ columns\ drawn\r\n\ @param\ x\ The\ x\ coordinate\ of\ top\ left\ corner\ of\ the\ first\ square\r\n\ @param\ y\ The\ y\ coordinate\ of\ top\ left\ corner\ of\ the\ first\ square\r\n\ @param\ w\ The\ width/\ height\ of\ the\ square\r\n\ @param\ dirRight\ Boolean\ value\ that\ specifies\ whether\ the\r\n\ gradient\ is\ drawn\ to\ the\ left\ or\ right\r\n\ @colorNum\ The\ number\ of\ the\ starting\ color\ (1,2,\ or\ 3)\r\n\ \ \ \ \ \ \ \r\n
+comment4.params=p\ x\ y\ length
+comment4.target=void\ drawLine(gpdraw.DrawingTool,\ int,\ int,\ int)
+comment4.text=<br>Draws\ a\ black\ line\ of\ specified\ length\ at\ the\ given\ x,\ y\r\n\ coordinate</br>\r\n\ \r\n\ @param\ p\ The\ DrawingTool\ used\ to\ draw\ the\ line\r\n\ @param\ x\ The\ x\ coordinate\ of\ where\ the\ line\ will\ be\ centered\r\n\ @param\ y\ The\ y\ coordinate\ of\ where\ the\ line\ will\ be\ centered\r\n\ @param\ length\ The\ horizontal\ length\ of\ the\ line\r\n\ \ \ \ \ \ \ \r\n
+comment5.params=cN\ p
+comment5.target=void\ setColorNum(int,\ gpdraw.DrawingTool)
+comment5.text=\ <br>\ Sets\ the\ color\ of\ the\ DrawingTool\ p\ according\ to\r\n\ the\ number\ passed\ in.\ </br>\r\n\ \r\n\ @param\ cN\ Number\ related\ to\ each\ color\ (can\ be\ 1,2\ or\ 3)\r\n\ @param\ p\ DrawingTool\ used\ to\ draw\ on\ SketchPad\r\n\ \ \ \ \ \ \ \r\n
+numComments=6
