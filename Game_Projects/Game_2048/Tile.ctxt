@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=Tile
+comment1.params=
+comment1.target=Tile()
+comment2.params=w\ h\ color
+comment2.target=Tile(int,\ int,\ greenfoot.Color)
+comment3.params=
+comment3.target=void\ act()
+comment4.params=
+comment4.target=boolean\ isCoveredByMovingTile()
+numComments=5
