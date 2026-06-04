@@ -1,0 +1,36 @@
+/*
+    Name:       Sanika Thatte
+    Date:       10/9/25
+    Period:     3
+
+    Is this lab fully working? Yes.
+*/
+
+import com.controlStructures.HappinessDetector;
+
+public class P3_Thatte_Sanika_HappinessDetector implements HappinessDetector{
+    @Override
+    public boolean isHappy(int num, int a, int b){
+        boolean generalRule = num%(double)(a)==0 && num%(double)(b)!=0;
+        
+        if(num>=0){
+            if(num<16){
+                if(!generalRule){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+            if(num>30 && num<54){
+                return true;
+            }
+            if(num%2!=0 && num>=81 && num<=99){
+                return true;
+            }
+            if(generalRule){
+                return true;
+            }
+        }
+        return false;
+    }
+}

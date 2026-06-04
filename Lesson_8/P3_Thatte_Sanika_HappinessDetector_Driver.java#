@@ -1,0 +1,8 @@
+import com.controlStructures.*;
+
+public class P3_Thatte_Sanika_HappinessDetector_Driver{
+    public static void main(String[] args){
+        HappinessDetector h = new P3_Thatte_Sanika_HappinessDetector();
+        Tester.runTests(d);
+    }
+}
