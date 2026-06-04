@@ -1,0 +1,52 @@
+/*
+    Name:       Sanika Thatte
+    Date:       9/30/25
+    Period:     3
+
+    Is this lab fully working?  Yes
+*/
+
+public class P3_Thatte_Sanika_IterativeReverseAndPalindrome{
+    public static String iterativeStringReverse(String str){
+        String n = "";
+        for(int i=str.length()-1;i>=0;i--){
+            n=n+str.charAt(i);
+        }
+        return n;
+    }
+
+    public static boolean iterativeIsPalindrome(String str){
+        String o="";
+        String n = "";
+        for(int i=0;i<str.length();i++){
+            if(!Character.isWhitespace(str.charAt(i))){
+                o=o+str.charAt(i);
+            }
+        }
+
+        for(int i=str.length()-1;i>=0;i--){
+            if(!Character.isWhitespace(str.charAt(i))){
+                n=n+str.charAt(i);
+            }
+        }
+        if(n.equalsIgnoreCase(str)){
+            return true;
+        }
+        return false;
+    }
+
+    public static void main(String[] args){
+        System.out.println(P3_Thatte_Sanika_IterativeReverseAndPalindrome.iterativeStringReverse("123456789"));
+        System.out.println(P3_Thatte_Sanika_IterativeReverseAndPalindrome.iterativeStringReverse("A"));
+        System.out.println(P3_Thatte_Sanika_IterativeReverseAndPalindrome.iterativeStringReverse(""));
+
+        System.out.println(P3_Thatte_Sanika_IterativeReverseAndPalindrome.iterativeIsPalindrome("radar"));
+        System.out.println(P3_Thatte_Sanika_IterativeReverseAndPalindrome.iterativeIsPalindrome("J"));
+        System.out.println(P3_Thatte_Sanika_IterativeReverseAndPalindrome.iterativeIsPalindrome("Lewd did I live, & evil I did dwel."));
+        System.out.println(P3_Thatte_Sanika_IterativeReverseAndPalindrome.iterativeIsPalindrome("I like Java"));
+        System.out.println(P3_Thatte_Sanika_IterativeReverseAndPalindrome.iterativeIsPalindrome("Straw? No, too stupid a fad, I put soot on warts."));
+        System.out.println(P3_Thatte_Sanika_IterativeReverseAndPalindrome.iterativeIsPalindrome("***Nurse!*** I spy gypsies....run!!!!!"));
+        System.out.println(P3_Thatte_Sanika_IterativeReverseAndPalindrome.iterativeIsPalindrome(""));
+
+    }
+}

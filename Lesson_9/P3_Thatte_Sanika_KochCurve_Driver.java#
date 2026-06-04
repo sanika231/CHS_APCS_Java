@@ -1,0 +1,8 @@
+
+
+public class P3_Thatte_Sanika_KochCurve_Driver{
+    public static void main(String[] args){
+        P3_Thatte_Sanika_KochCurve curve = new P3_Thatte_Sanika_KochCurve();
+        curve.drawKochSnowflake(5,400);
+    }
+}

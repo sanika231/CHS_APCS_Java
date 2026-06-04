@@ -1,0 +1,10 @@
+#BlueJ class context
+comment0.target=P3_Thatte_Sanika_Fibonacci
+comment0.text=\r\n\ \ \ \ Name\:\ \ \ \ \ \ \ Sanika\ Thatte\r\n\ \ \ \ Date\:\ \ \ \ \ \ \ 9/27/25\r\n\ \ \ \ Period\:\ \ \ \ \ 3\r\n\r\n\ \ \ \ Is\ this\ lab\ fully\ working?\ Yes.\r\n
+comment1.params=x
+comment1.target=int\ getFibonacciNumber(int)
+comment2.params=a\ b
+comment2.target=int\ posMultiplication(int,\ int)
+comment3.params=a\ b
+comment3.target=int\ allMultiplication(int,\ int)
+numComments=4

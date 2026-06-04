@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Fractal_Practice
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=length\ level
+comment2.target=void\ fractal(double,\ int)
+numComments=3

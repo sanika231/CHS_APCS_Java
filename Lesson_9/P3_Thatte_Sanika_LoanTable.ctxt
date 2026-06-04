@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=P3_Thatte_Sanika_LoanTable
+comment1.params=args
+comment1.target=void\ main(java.lang.String[])
+comment2.params=p\ years\ rate
+comment2.target=double\ determinePayments(double,\ int,\ double)
+numComments=3

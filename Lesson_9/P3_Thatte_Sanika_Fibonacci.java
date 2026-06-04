@@ -1,0 +1,37 @@
+/*
+    Name:       Sanika Thatte
+    Date:       9/27/25
+    Period:     3
+
+    Is this lab fully working? Yes.
+*/
+
+public class P3_Thatte_Sanika_Fibonacci{
+    public int getFibonacciNumber(int x){
+        if(x == 0){
+            return 0;
+        }else if(x==1){
+            return 1;
+        }else{
+            return getFibonacciNumber(x-1) + getFibonacciNumber(x-2);
+        }
+    }
+    
+    public int posMultiplication(int a, int b){
+        if(a>=0 && b>=0){
+            if(a==0 || b==0){
+                return 0;
+            }
+            return a+(a*(b-1));
+        }else{
+            return -1;
+        }
+    }
+    
+    public int allMultiplication(int a, int b){
+        if(a==0 || b==0){
+            return 0;
+        }
+        return a+(a*(b-1));
+    }
+}

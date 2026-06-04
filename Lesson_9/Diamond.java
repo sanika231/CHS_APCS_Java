@@ -1,0 +1,26 @@
+public class Diamond{
+    public void printDiamond(int n){
+        if(n>=1 && n<=40){
+            int stars = 0;
+            int spaces = n-1;
+            for(int i=0;i<=n*2;i++){
+                for(int k=0;k<=spaces;k++){
+                    System.out.print(" ");
+                }
+                for(int t = 0;t<stars+1;t++){
+                    System.out.print("*");
+                }
+                System.out.println();
+                if(i<n){
+                    stars+=2;
+                    spaces-=1;
+                }else{
+                    stars-=2;
+                    spaces+=1;
+                }
+            }
+        }else{
+            System.out.println("given parameter is too small or too large");
+        }
+    }
+}

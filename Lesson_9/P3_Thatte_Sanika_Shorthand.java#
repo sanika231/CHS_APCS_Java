@@ -1,0 +1,79 @@
+/*
+    Name:       Sanika Thatte
+    Date:       11/14/25
+    Period:     3
+
+    Is this lab fully working?  Yes
+*/
+
+import java.util.ArrayList;
+
+public class P3_Thatte_Sanika_Shorthand{
+    public String translateToShorthand(String str){
+        ArrayList<String> a = new ArrayList<>();
+        String s = "";
+        for(int i=0;i<str.length();i++){
+            if(Character.isLetter(str.charAt(i))){
+                s = s+str.charAt(i);
+            }else{
+                a.add(s);
+                a.add(""+str.charAt(i));
+                s = "";
+            }
+        }
+        if(!s.equals("")){
+            a.add(s);
+        }
+        
+        String newString = "";
+        for(String string:a){
+            if(string.length()>0 && Character.isLetter(string.charAt(0))){
+                //is word
+                newString = newString+ checkCases(string);
+            }else{
+                //not word
+                newString = newString + string;
+            }
+        }
+        //System.out.println("Old list: "+a);
+        return newString;
+    }
+    
+    public String checkCases(String str){
+        if(str.equalsIgnoreCase("and")){
+            return "&";
+        }else if(str.equalsIgnoreCase("to")){
+            return "2";
+        }else if(str.equalsIgnoreCase("you")){
+            return "u";
+        }else if(str.equalsIgnoreCase("for")){
+            return "4";
+        }else{
+            return removeVowels(str);
+        }
+    }
+    
+    public String removeVowels(String str){
+        String newString = "";
+        if(str.length()>1){
+            for(int i=0;i<str.length();i++){
+                if(!(str.toLowerCase().charAt(i)=='a' || str.toLowerCase().charAt(i)=='e' ||str.toLowerCase().charAt(i)=='i' ||str.toLowerCase().charAt(i)=='o' ||str.toLowerCase().charAt(i)=='u')){
+                    newString = newString + str.charAt(i);
+                }
+            }
+            return newString;
+        }else{
+            return str;
+        }
+    }
+
+    public static void main(String[] args){
+        P3_Thatte_Sanika_Shorthand a = new P3_Thatte_Sanika_Shorthand();
+        System.out.println(a.translateToShorthand("A truck"));
+        System.out.println(a.translateToShorthand("Me AND YOU forever!"));
+        System.out.println(a.translateToShorthand("To Bill and Ted: Are you going to be EXCELLENT to towtrucks too???"));
+        System.out.println(a.translateToShorthand("Look, here's a 3.14159 I made for you! And? How's it taste?"));
+        System.out.println(a.translateToShorthand("MY mAmA aLWaYs said, \"LIFe iS like a box of chocolates...you never know what you're gonna get!\""));
+        System.out.println(a.translateToShorthand("!!aNd!! !tO? ****yOu***foR** fork toward young fo"));
+    }
+}
